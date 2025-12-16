@@ -1,9 +1,9 @@
 # Documentation
 
-The `docs/` directory contains the remaining written material for PRYMA after trimming legacy drafts.
+The `docs/` directory organizes all written material for PRYMA. It currently contains the whitepaper drafts segmented by topic.
 
 ## Structure
 
-- `README.md`: This index.
+- `whitepaper/`: Hierarchical outline of the PRYMA whitepaper, organized by numbered sections for easier navigation.
 
-Archived whitepaper drafts are available in the historical branch referenced in the root README if needed.
+Refer to `docs/whitepaper/README.md` for a full table of contents and individual chapter descriptions.
