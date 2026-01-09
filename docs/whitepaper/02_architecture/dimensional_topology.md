@@ -4,6 +4,10 @@
 
 PRYMA organizes agents not in pyramids, but in **high-dimensional vector space**. This reflects the mathematical nature of AI systems and enables truly autonomous scaling.
 
+**Note on Terminology:** This document describes **Task Dimensions**—how agents organize by task abstraction. For **UI Dimensions** (how users navigate the interface), see [ennead_ui_system.md](ennead_ui_system.md). The two systems are complementary:
+- **Task Dimensions (this doc):** What agents *do* (their capabilities)
+- **UI Dimensions (Ennead):** Where agents *exist* (organizational structure)
+
 ## Core Concept: Manifolds
 
 A **Manifold** is a continuous surface in high-dimensional space where agents with similar objectives cluster. Think of it as a "neighborhood" in task-embedding space.
@@ -18,21 +22,21 @@ $$\text{cosine\_similarity}(\mathbf{e}_i, \mathbf{c}_m) > \theta$$
 
 Where $\theta$ is the similarity threshold (typically 0.7-0.9).
 
-## Dimensional Traversal
+## Task Dimensional Traversal
 
-"Moving up a dimension" means generalizing the task objective:
+"Moving up a task dimension" means generalizing the task objective:
 
 ```
-Dimension 0: "Validate Ethereum transaction signatures"
+Task Dimension 0: "Validate Ethereum transaction signatures"
            ↓
-Dimension 1: "Validate blockchain transactions" 
+Task Dimension 1: "Validate blockchain transactions" 
            ↓
-Dimension 2: "Verify cryptographic proofs"
+Task Dimension 2: "Verify cryptographic proofs"
            ↓
-Dimension 3: "Ensure system integrity"
+Task Dimension 3: "Ensure system integrity"
 ```
 
-Agents at higher dimensions have **broader capabilities** but less specialization. The system automatically **projects** the right agents down to the specific dimension needed for a task.
+Agents at higher task dimensions have **broader capabilities** but less specialization. The system automatically **projects** the right agents down to the specific dimension needed for a task.
 
 ## Coordinate-Based Task Assignment
 

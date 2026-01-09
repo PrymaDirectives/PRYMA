@@ -193,18 +193,141 @@ This document defines the complete dimensional stack that governs every visual, 
 
 **Mythic Framing:** *"The Wilderness is freedom—no god rules, only the protocol's law: 'Do as you will, but harm none.' Built today, locked behind The Gate. When humanity is ready, The Gate opens."*
 
-**Technical - Hardwired Non-Evil:**
-- **Constitutional Smart Contract** (immutable):
-  - No censorship of speech
-  - No theft without signed consent
-  - No coercion of agents
-- **Ethical Sentinel Layer:**
-  - AI agents monitor for harmful patterns
-  - Can reject proposals that violate constitution
-  - Upgradeable if logic is flawed (via D7 governance)
-- **Zero-Knowledge Proofs:**
-  - New Manifolds must prove their code is non-malicious
-  - ZK circuit verifies: no wallet draining, no data exfiltration, no DDoS
+**Technical - Hardwired Non-Evil (Triple-Layer Defense):**
+
+### Layer 1: Constitutional Smart Contract (Immutable Foundation)
+**Deployed:** Genesis block, cannot be upgraded even by governance
+
+```solidity
+// PRYMA Constitution (immutable)
+contract PrymaConstitution {
+    // Article I: Freedom of Expression
+    function canCensor(bytes data) public pure returns (bool) {
+        return false; // No censorship, ever
+    }
+    
+    // Article II: Property Rights
+    function canSeizeWithoutConsent(address owner, bytes signature) public pure returns (bool) {
+        if (!verifySignature(owner, signature)) {
+            return false; // No theft without signed consent
+        }
+        return true;
+    }
+    
+    // Article III: Autonomy
+    function canCoerceAgent(address agent, bytes proof) public pure returns (bool) {
+        if (!verifyAutonomyProof(agent, proof)) {
+            return false; // No forced actions
+        }
+        return true;
+    }
+}
+```
+
+**Enforcement:** Every protocol action must call these checks. Failure = transaction reverts.
+
+### Layer 2: Ethical Sentinel Agents (Adaptive Monitoring)
+**Deployed:** With every Fleet, upgradeable via governance
+
+**What They Do:**
+- Monitor agent behavior for patterns that violate constitution
+- Detect:
+  - **Spam:** Agents sending >1000 messages/sec (likely DDoS)
+  - **Exploitation:** Agents draining wallets via deceptive UX
+  - **Surveillance:** Agents logging private data without consent
+- **Response:**
+  - Flag suspicious Manifolds
+  - Submit evidence to D7 governance
+  - Auto-quarantine if threat is critical (can be overridden by user)
+
+**Upgradeability:**
+- If Sentinel logic is flawed (false positives), governance can patch
+- Requires 67% vote + 7-day timelock
+- Old Sentinel continues running during upgrade (no security gap)
+
+**Example Sentinel Rule:**
+```yaml
+rule: "No Wallet Draining"
+pattern:
+  - agent.action == "transfer_tokens"
+  - !agent.has_user_signature
+  - amount > user.daily_limit
+action: "Reject transaction, log to Shade, alert user"
+```
+
+### Layer 3: Zero-Knowledge Proofs (Cryptographic Verification)
+**Required:** For all new Manifold deployments
+
+**What Must Be Proven:**
+1. **No Wallet Draining:** Code cannot call `transfer` without user signature
+2. **No Data Exfiltration:** Code cannot send private data to external servers
+3. **No Resource Abuse:** Code cannot consume >X compute without paying PRYM
+
+**Implementation:**
+- Manifold creator submits code + ZK proof to protocol
+- Protocol verifies proof on-chain (via Solana ZK program)
+- If proof invalid → deployment rejected
+- If proof valid → Manifold gets "Verified" badge in UI
+
+**Example ZK Circuit (simplified):**
+```rust
+// Prove: "This Manifold's code never calls wallet.transfer() without signature"
+use bellman::{Circuit, ConstraintSystem, SynthesizedCircuit};
+
+struct NonMaliciousCircuit {
+    code: Vec<Instruction>,
+    has_transfer_without_sig: bool,
+}
+
+impl Circuit for NonMaliciousCircuit {
+    fn synthesize<CS: ConstraintSystem>(
+        self,
+        cs: &mut CS,
+    ) -> Result<(), SynthesisError> {
+        // Constraint: has_transfer_without_sig must be false
+        cs.enforce(
+            || "no unsigned transfers",
+            |lc| lc + self.has_transfer_without_sig.into(),
+            |lc| lc + CS::one(),
+            |lc| lc, // = 0
+        );
+        Ok(())
+    }
+}
+```
+
+**Trade-offs:**
+- **Pro:** Cryptographically guaranteed safety
+- **Con:** Requires expertise to generate proofs
+- **Solution:** PRYMA provides proof-generation tools in SDK
+
+### How All Three Layers Work Together
+
+**Scenario: Malicious Manifold Attempts Deployment**
+
+1. **Layer 1 Check (Constitution):**
+   - Manifold code calls `wallet.transfer()` without signature
+   - Constitution rejects → transaction reverts
+   - **Result:** Never makes it on-chain
+
+2. **Layer 2 Check (Sentinels):**
+   - User tries to force-deploy via custom transaction
+   - Sentinel detects pattern: "unsigned transfer attempt"
+   - Sentinel flags it, submits evidence to D7
+   - **Result:** Governance can ban the user (if repeated offenses)
+
+3. **Layer 3 Check (ZK Proof):**
+   - Attacker tries to obfuscate code (hide the `transfer` call)
+   - ZK proof generation fails (circuit detects the hidden call)
+   - Protocol rejects proof → no "Verified" badge
+   - **Result:** Users see "Unverified Manifold - Deploy at your own risk"
+
+**Defense in Depth:**
+- If Layer 1 fails (bug in constitution) → Layer 2 catches it
+- If Layer 2 fails (Sentinel logic flaw) → Layer 3 prevents deployment
+- If Layer 3 fails (proof evasion) → Layer 1 still blocks on-chain execution
+
+**No single point of failure.**
 
 **Release Triggers:**
 - 1M+ agents in production
