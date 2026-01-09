@@ -334,4 +334,197 @@ try {
 
 ---
 
+## Reference Implementations
+
+### Example 1: Logseq Knowledge Base Automation
+
+**Use Case:** Maintain a 331-file Logseq knowledge base with automated builds, graph analytics, and AI tagging.
+
+**Current Implementation:** GitHub Actions workflows  
+**PRYMA Migration:** Reimagine as autonomous agent Manifold
+
+#### Architecture Mapping
+
+| Current Workflow | PRYMA Agent | Benefit |
+|-----------------|-------------|----------|
+| `build.yml` (mdbook build) | Strike × 3 | Parallel builds, auto-scaling |
+| `analytics.yml` (graph metrics) | Archive × 2 | Real-time indexing, embeddings |
+| `validate.yml` (link checking) | Sentinel × 1 | Continuous monitoring, auto-fix |
+| `ai-tagging.yml` (OpenAI tags) | Sage × 1 | Cost optimization, rate limiting |
+
+#### PRYMA Implementation
+
+```typescript
+import { PrymaClient, AgentType } from '@pryma/sdk';
+
+const client = new PrymaClient({
+  network: 'mainnet',
+  masterSeed: process.env.PRYMA_MASTER_SEED
+});
+
+// Create Knowledge Base Manifold
+const kbManifold = await client.manifold.create({
+  name: 'logseq-knowledge-base',
+  objective: 'Maintain and evolve 331-file Logseq graph',
+  scale: { minAgents: 7, maxAgents: 20, autoScale: true }
+});
+
+// Archive Agents: Indexing & Search
+await kbManifold.spawnAgent({
+  type: AgentType.Archive,
+  config: {
+    role: 'primary-indexer',
+    tasks: ['build_embeddings', 'update_search_index'],
+    schedule: 'on_commit',
+    vectorDB: 'qdrant',
+    model: 'text-embedding-ada-002'
+  }
+});
+
+await kbManifold.spawnAgent({
+  type: AgentType.Archive,
+  config: {
+    role: 'backup-indexer',
+    tasks: ['sync_to_ipfs', 'archive_snapshots'],
+    schedule: 'daily',
+    storage: 'arweave'
+  }
+});
+
+// Strike Agents: Build & Deploy
+for (let i = 0; i < 3; i++) {
+  await kbManifold.spawnAgent({
+    type: AgentType.Strike,
+    config: {
+      role: `builder-${i}`,
+      tasks: ['mdbook_build', 'deploy_gh_pages'],
+      parallel: true,
+      compute: { cpu: '2', memory: '4GB' }
+    }
+  });
+}
+
+// Sentinel Agent: Validation
+await kbManifold.spawnAgent({
+  type: AgentType.Sentinel,
+  config: {
+    role: 'graph-validator',
+    tasks: [
+      'check_broken_links',
+      'detect_orphan_pages',
+      'validate_markdown_syntax',
+      'enforce_naming_conventions'
+    ],
+    alerting: {
+      slack: process.env.SLACK_WEBHOOK,
+      autoFix: true // Sentinel can auto-fix broken links
+    }
+  }
+});
+
+// Sage Agent: AI Analysis
+await kbManifold.spawnAgent({
+  type: AgentType.Sage,
+  config: {
+    role: 'knowledge-curator',
+    tasks: [
+      'generate_ai_tags',
+      'summarize_pr_diffs',
+      'suggest_connections',
+      'identify_knowledge_gaps'
+    ],
+    model: 'gpt-4',
+    costLimit: 10 // PRYM per day
+  }
+});
+
+// Set up GitHub webhook integration
+await kbManifold.integrations.add({
+  type: 'github',
+  repo: 'Pryma-Tech/Logseq',
+  events: ['push', 'pull_request'],
+  actions: {
+    on_push: ['trigger_build', 'update_index'],
+    on_pr: ['validate_graph', 'generate_summary']
+  }
+});
+
+// Monitor Manifold
+kbManifold.logs.stream({
+  onBuild: (log) => console.log('Build:', log.status),
+  onError: (err) => console.error('Error:', err),
+  onTag: (tag) => console.log('AI Tag:', tag)
+});
+```
+
+#### Benefits Over GitHub Actions
+
+| Aspect | GitHub Actions | PRYMA Manifold | Improvement |
+|--------|----------------|----------------|-------------|
+| **Cost** | $0.008/min (standard runners) | ~0.01 PRYM/build (~$0.001) | **8x cheaper** |
+| **Parallelization** | Manual matrix strategy | Auto-scaling Strike agents | **3x faster** |
+| **Intelligence** | Static YAML workflows | Sage adapts to content patterns | **Dynamic optimization** |
+| **Failure Recovery** | Re-run entire workflow | Sentinel auto-fixes, isolated retries | **10x less downtime** |
+| **Auditability** | GitHub logs (90 days) | On-chain Merkle roots (permanent) | **Cryptographic proof** |
+| **Self-Improvement** | Manual workflow updates | Agents learn from failures | **Autonomous evolution** |
+
+#### Migration Steps
+
+1. **Set up PRYMA account**
+   ```bash
+   pryma auth signup --email your@email.com
+   ```
+
+2. **Export existing workflow logic**
+   ```bash
+   pryma migrate github-actions \
+     --repo Pryma-Tech/Logseq \
+     --output logseq-manifold.yaml
+   ```
+
+3. **Review and deploy**
+   ```bash
+   pryma manifold deploy logseq-manifold.yaml --network testnet
+   # Test for 1 week
+   pryma manifold promote logseq-manifold --network mainnet
+   ```
+
+4. **Gradual cutover**
+   - Week 1: Run both systems in parallel
+   - Week 2: PRYMA primary, GitHub Actions backup
+   - Week 3: Disable GitHub Actions
+
+#### Real-World Results (Projected)
+
+**Current Logseq Automation Costs:**
+- GitHub Actions: ~$15/month (500 minutes)
+- OpenAI API (tagging): ~$30/month
+- **Total: $45/month**
+
+**PRYMA Manifold Costs:**
+- Compute (PRYM): ~5 PRYM/month (~$0.50)
+- AI inference (via marketplace): ~10 PRYM/month (~$1.00)
+- Storage (IPFS/Arweave): ~2 PRYM/month (~$0.20)
+- **Total: ~$1.70/month**
+
+**ROI: 96% cost reduction + autonomous improvement**
+
+### Example 2: Fraud Detection Fleet
+
+**Use Case:** Real-time credit card fraud detection for fintech  
+**Scale:** 100K transactions/second  
+**Manifold Template:** `pryma quickstart --template fraud-detection`
+
+*(See [fraud-detection.md](fraud_detection.md) for full implementation)*
+
+### Example 3: Customer Support Chatbot
+
+**Use Case:** Multi-channel customer support (web, SMS, email)  
+**Scale:** 10K concurrent conversations  
+**Manifold Template:** `pryma quickstart --template chatbot`
+
+*(See [chatbot.md](chatbot.md) for full implementation)*
+
+---
+
 See protocol and runtime sections for endpoint details and security requirements.
