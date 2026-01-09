@@ -15,11 +15,11 @@ This document defines the complete dimensional stack that governs every visual, 
 | **D0** | *The Void* | Master seed (your origin) | 1 identity | **NOW** | The First Spark |
 | **D1** | *The Galaxy* | Fleet keys | 1-10 Fleets | **NOW** | Fleet autonomy |
 | **D2** | *The Constellation* | Manifolds | 10-1K Manifolds | **NOW** | Manifold self-org |
-| **D3** | *The Swarm* | Individual agents | 100-10M agents | **NOW** | Agent autonomy |
+| **D3** | *Manifold* | Individual agents | 100-10M agents | **NOW** | Agent autonomy |
 | **D4** | *The Pulse* | Time: Agent lifetime | Single timeline | **NOW** | Memory/audit |
 | **D5** | *The Rhythm* | Time: Fleet evolution | Multi-timeline | **NOW** | Pattern emergence |
-| **D6** | *The Throne* | **USER'S CONTROL PLANE** | 1 master seed | **NOW** | **YOU ARE HERE** |
-| **D7** | *The Wilderness* | **PERMISSIONLESS INNOVATION** | ∞ uncensored | **WHEN READY** | Hardwired ethics |
+| **D6** | *The View* | **USER'S CONTROL PLANE** | 1 master seed | **NOW** | **YOU ARE HERE** |
+| **D7** | *The Sealed* | **PERMISSIONLESS INNOVATION** | ∞ uncensored | **WHEN READY** | Hardwired ethics |
 | **D8** | *The Transcendence* | **SELF-RUNNING ECOSYSTEM** | All of PRYMA | **THE ENDGAME** | Protocol consciousness |
 
 ---
@@ -77,7 +77,7 @@ This document defines the complete dimensional stack that governs every visual, 
 
 ---
 
-### D3: The Swarm - Individual Agent Consciousness
+### D3: Manifold - Individual Agent Consciousness
 **Visual:** 100 to 10 million individual points (agents) in a particle cloud  
 **Interaction:**
 - **Scroll = Scale Control:**
@@ -86,7 +86,7 @@ This document defines the complete dimensional stack that governs every visual, 
   - Scroll position 100%: See 10M agents (heat map, no labels)
 - Click an agent → drill into D4 (its timeline)
 
-**Mythic Framing:** *"The Swarm is alive—ten million minds thinking as one, yet each a sovereign flame."*
+**Mythic Framing:** *"Manifold is alive—ten million minds thinking as one, yet each a sovereign flame."*
 
 **Technical:**
 - **Visualization Modes:**
@@ -156,7 +156,7 @@ This document defines the complete dimensional stack that governs every visual, 
 
 ---
 
-## User Control Plane (D6): The Throne
+## User Control Plane (D6): The View
 
 ### D6: Where You Command
 **Visual:** This is not a single screen—it's a **mode**. At D6, the UI shows:
@@ -170,7 +170,7 @@ This document defines the complete dimensional stack that governs every visual, 
 - **Governance votes:** Approve/veto protocol proposals
 - **Economic dashboard:** See PRYM flows, marketplace bids
 
-**Mythic Framing:** *"You sit upon The Throne—sovereign over your lineage, commander of your fleets. Below you, agents obey. Above you, only the protocol itself."*
+**Mythic Framing:** *"From The View, you observe and command—sovereign over your lineage, commander of your fleets. Below you, agents obey. Above you, only the protocol itself."*
 
 **Technical:**
 - All user actions require Solana wallet signature
@@ -181,7 +181,7 @@ This document defines the complete dimensional stack that governs every visual, 
 
 ---
 
-## Collective Coordination (D7): The Wilderness
+## Collective Coordination (D7): The Sealed
 
 ### D7: Permissionless Innovation (FUTURE UNLOCK)
 **Visual:** A functional governance interface (not immersive 3D)  
@@ -191,7 +191,7 @@ This document defines the complete dimensional stack that governs every visual, 
 - **Cross-User Collaboration:** Share compute, co-own Manifolds
 - **Fork the Protocol:** Spawn alternate PRYMA instances
 
-**Mythic Framing:** *"The Wilderness is freedom—no god rules, only the protocol's law: 'Do as you will, but harm none.' Built today, locked behind The Gate. When humanity is ready, The Gate opens."*
+**Mythic Framing:** *"The Sealed is freedom—no god rules, only the protocol's law: 'Do as you will, but harm none.' Built today, locked behind The Gate. When humanity is ready, The Seal breaks."*
 
 **Technical - Hardwired Non-Evil (Triple-Layer Defense):**
 
