@@ -1,4 +1,17 @@
-# Container Roles & Responsibilities
+# 5. Container Taxonomy
+
+## Container Types
+<!-- To be written: English-friendly archetype names for each container type. -->
+
+## Functional Roles
+<!-- To be written: Description of each container’s function. -->
+
+## Taxonomy Table
+<!-- Placeholder: Container taxonomy table to be added. -->
+
+---
+
+# Container Roles & Responsibilities (Reference)
 
 PRYMA’s architecture is built on a pantheon of mythic containers, each embodying a unique archetype and technical function. These roles are both symbolic and practical, ensuring resilience, adaptability, and creative emergence within the system.
 

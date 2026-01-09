@@ -1,4 +1,17 @@
-# System Architecture Overview
+# 4. Architectural Stack
+
+## Layered Architecture
+<!-- To be written: Hardware abstraction, container runtime, protocol layer, governance layer. -->
+
+## Core Technologies
+<!-- To be written: WASM, Zig, Go, Rust, Cython, etc. -->
+
+## Diagram Reference
+<!-- Placeholder: Architectural stack diagram to be added. -->
+
+---
+
+# System Architecture Overview (Reference)
 
 ## Analytics-Driven Feedback Loop
 

@@ -1,4 +1,23 @@
-# PRYMA Mythology
+# 2. Mythic/Conceptual Framing
+
+## Symbolic Narrative
+In complex systems, myth often serves merely as aesthetic branding. In PRYMA, symbolic framing is **orientational**—it acts as cognitive scaffolding for structural constraints.
+
+-   **"Autonomic Fleets"** is not a metaphor but a technical requirement for self-managing containers.
+-   **"Cryptographic Governance"** is not a slogan but a system where governance is enforced via verifiable computation.
+-   **"Adversarial Simulation"** is not a feature list item but a core feedback loop for system evolution.
+
+We use mythic language to reinforce that these are non-negotiable architectural mandates. If "autonymy" were just a story, it could be replaced with manual management. In PRYMA, the myth describes the machinery.
+
+## Visionary Manifesto
+<!-- To be written: Philosophical and conceptual underpinnings. -->
+
+## Diagram Reference
+<!-- Placeholder: Mythic system diagram to be added. -->
+
+---
+
+# PRYMA Mythology (Reference)
 
 ## The First Spark
 

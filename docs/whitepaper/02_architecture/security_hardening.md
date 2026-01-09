@@ -1,4 +1,10 @@
-# Security Hardening
+# Security Hardening & Adaptability
+
+## Self-Hardening Cryptography
+Security in PRYMA is not static. The system employs **dynamic parameter adaptation** based on real-time threat levels. If the Sentinel or Shade agents detect increased adversarial activity, the protocol can autonomously:
+- Increase difficulty requirements for Proof-of-Work puzzles (if used for spam prevention).
+- Rotate cryptographic keys more frequently.
+- Require higher thresholds for multi-signature governance actions.
 
 ## Strategies
 
@@ -6,7 +12,7 @@ PRYMA’s security is multi-layered, combining technical rigor with mythic arche
 
 - **Sentinel Container**: Acts as the vigilant guardian, monitoring all activity, enforcing security policies, and responding to threats in real time.
 - **Tamper-Proof Audit Logs**: Every action is recorded in immutable logs, ensuring transparency and accountability. These logs are cryptographically signed and distributed across the network.
-- **Adversarial Sandbox (Shade)**: Provides a safe environment for simulating attacks, running red team exercises, and stress-testing the system. Shade ensures that vulnerabilities are discovered and addressed before they can be exploited.
+- **Adversarial Sandbox (Shade)**: Provides a safe environment for simulating attacks. This is not just a test environment but a **feedback loop**: successful attacks in the sandbox automatically trigger hardening in the live fleet.
 
 ## Technical and Mythic Metaphors
 - Sentinel is the ever-watchful eye, the shield that never sleeps.
