@@ -14,4 +14,4 @@ The security container (Sentinel) is PRYMA’s shield, responsible for:
 ```
 
 ## Mythic Metaphor
-Sentinel is the ever-watchful guardian, the shield that never sleeps, ensuring PRYMA’s integrity and resilience.
+Sentinel (The Guardian) is the ever-watchful protector, ensuring PRYMA's integrity and resilience.

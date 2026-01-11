@@ -1,6 +1,8 @@
-# Agent Types
+# Container Archetypes
 
-PRYMA agents are the living protocols of the ecosystem, each embodying a mythic archetype and a technical function. Their diversity ensures resilience, creativity, and strategic depth.
+PRYMA containers are the living protocols of the ecosystem, each embodying a mythic archetype and a technical function. Their diversity ensures resilience, creativity, and strategic depth.
+
+> **Canonical Reference:** See [framework.md](../../../framework.md) sections 5 & 10 for complete archetype definitions.
 
 ## Dimensional Organization: Manifolds, Not Hierarchies
 
@@ -32,26 +34,28 @@ Users don't drag-and-drop agents into folders. Instead, they:
 - **Self-Healing:** If an agent fails, the nearest neighbor in vector space takes over
 - **Zero Manual Management:** Users manage outcomes (coordinates), not org charts
 
-## Agent Archetypes
+## Container Archetypes
 
-| Agent      | Mythic Archetype         | Technical Function                                      |
-|------------|-------------------------|---------------------------------------------------------|
-| **Lumen**     | The Light-Bringer        | Central reasoning, logic, and orchestration             |
-| **Strike**    | The Hand of Action      | Task execution, deployment, workflow management         |
-| **Echo**      | The Voice               | Communications, I/O, message translation                |
-| **Sentinel**  | The Shield              | Security, monitoring, threat response                   |
-| **Sage**      | The Mind                | Strategic planning, optimization, scenario analysis     |
-| **Archive**   | The Memory              | Knowledge storage, retrieval, auditability              |
-| **Spirit**    | The Spark Within        | Micro-agents, emergent behaviors, creative tasks        |
-| **Shade**     | The Shadow              | Adversarial sandbox, red teaming, stress testing        |
+| Agent      | Mythic Archetype              | Technical Function                                      |
+|------------|------------------------------|---------------------------------------------------------|
+| **Lumen**     | The Oracle                   | Central reasoning, logic, and orchestration             |
+| **Strike**    | The Warrior                  | Task execution, deployment, workflow management         |
+| **Echo**      | The Herald                   | Communications, I/O, message translation                |
+| **Sentinel**  | The Guardian                 | Security, monitoring, threat response                   |
+| **Argus**     | The All-Seeing Guardian      | Perception, environmental monitoring                    |
+| **Sage**      | The Architect                | Strategic planning, optimization, scenario analysis     |
+| **Archive**   | The Librarian                | Knowledge storage, retrieval, auditability              |
+| **Spirit**    | The Swarm                    | Micro-agents, emergent behaviors, creative tasks        |
+| **Shade**     | The Trickster                | Adversarial sandbox, red teaming, stress testing        |
 
 ### Technical and Mythic Descriptions
 
-- **Lumen**: The system’s sun, illuminating all reasoning and decision-making. Coordinates other agents for coherence and purpose.
-- **Strike**: The executor, turning plans into reality through precise action and deployment.
-- **Echo**: The communicator, ensuring every message is signed, verified, and delivered with integrity.
-- **Sentinel**: The guardian, enforcing security policies and responding to anomalies.
-- **Sage**: The strategist, architecting long-term success through simulation and optimization.
-- **Archive**: The historian, preserving knowledge and enabling retrieval and audit.
-- **Spirit**: The creative force, spawning micro-agents and emergent behaviors.
-- **Shade**: The adversary, providing a safe space for testing and strengthening the system.
+- **Lumen** (The Oracle): The system's sun, illuminating all reasoning and decision-making. Coordinates other containers for coherence and purpose.
+- **Strike** (The Warrior): The executor, turning plans into reality through precise action and deployment.
+- **Echo** (The Herald): The communicator, ensuring every message is signed, verified, and delivered with integrity.
+- **Sentinel** (The Guardian): The security enforcer, enforcing policies and responding to anomalies.
+- **Argus** (The All-Seeing Guardian): The perceptual layer, monitoring environmental state and container health across the fleet.
+- **Sage** (The Architect): The strategist, architecting long-term success through simulation and optimization.
+- **Archive** (The Librarian): The historian, preserving knowledge and enabling retrieval and audit.
+- **Spirit** (The Swarm): The creative force, spawning micro-agents and emergent behaviors.
+- **Shade** (The Trickster): The adversary, providing a safe space for testing and strengthening the system.

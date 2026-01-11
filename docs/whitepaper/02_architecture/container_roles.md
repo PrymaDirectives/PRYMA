@@ -15,16 +15,17 @@
 
 PRYMA’s architecture is built on a pantheon of mythic containers, each embodying a unique archetype and technical function. These roles are both symbolic and practical, ensuring resilience, adaptability, and creative emergence within the system.
 
-| Name      | Mythic Archetype         | Technical Function                                      |
-|-----------|-------------------------|---------------------------------------------------------|
-| **Lumen**     | The Light-Bringer        | Main reasoning agent, orchestrates logic and planning   |
-| **Strike**    | The Hand of Action      | Executes tasks, deploys code, manages workflows         |
-| **Echo**      | The Voice               | Handles all communications, messaging, and I/O          |
-| **Sentinel**  | The Shield              | Security, monitoring, and threat response               |
-| **Sage**      | The Mind                | Strategic planning, optimization, and scenario analysis |
-| **Archive**   | The Memory              | Knowledge storage, retrieval, and versioning            |
-| **Spirit**    | The Spark Within        | Micro-agents, emergent behaviors, and creative tasks    |
-| **Shade**     | The Shadow              | Adversarial sandbox, red teaming, and stress testing    |
+| Name      | Mythic Archetype              | Technical Function                                      |
+|-----------|------------------------------|---------------------------------------------------------|
+| **Lumen**     | The Oracle                   | Main reasoning agent, orchestrates logic and planning   |
+| **Strike**    | The Warrior                  | Executes tasks, deploys code, manages workflows         |
+| **Echo**      | The Herald                   | Handles all communications, messaging, and I/O          |
+| **Sentinel**  | The Guardian                 | Security, monitoring, and threat response               |
+| **Argus**     | The All-Seeing Guardian      | Perception, environmental monitoring, fleet observation |
+| **Sage**      | The Architect                | Strategic planning, optimization, and scenario analysis |
+| **Archive**   | The Librarian                | Knowledge storage, retrieval, and versioning            |
+| **Spirit**    | The Swarm                    | Micro-agents, emergent behaviors, and creative tasks    |
+| **Shade**     | The Trickster                | Adversarial sandbox, red teaming, and stress testing    |
 
 ### Detailed Descriptions
 

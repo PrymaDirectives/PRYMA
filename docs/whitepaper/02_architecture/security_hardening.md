@@ -15,8 +15,8 @@ PRYMA’s security is multi-layered, combining technical rigor with mythic arche
 - **Adversarial Sandbox (Shade)**: Provides a safe environment for simulating attacks. This is not just a test environment but a **feedback loop**: successful attacks in the sandbox automatically trigger hardening in the live fleet.
 
 ## Technical and Mythic Metaphors
-- Sentinel is the ever-watchful eye, the shield that never sleeps.
+- Sentinel (The Guardian) is the ever-watchful protector, never sleeping.
 - Audit logs are the annals of the realm, preserving every deed for future scrutiny.
-- Shade is the shadow adversary, the necessary darkness that reveals the system’s true strength.
+- Shade (The Trickster) is the shadow adversary, the necessary darkness that reveals the system's true strength.
 
 Together, these elements create a security posture that is both proactive and resilient—capable of withstanding the evolving threats of a decentralized, adversarial world.

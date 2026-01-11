@@ -5,12 +5,16 @@ This directory contains the PRYMA whitepaper drafts, organized into numbered sec
 
 ## Table of Contents
 
+## Canonical Reference
+
+**[framework.md](../../framework.md)** is the structural skeleton and single source of truth. All content in this directory must align with framework definitions.
+
 1. **Intro** (`01_intro/`)
    - Vision, manifesto, and mythology of the PRYMA ecosystem.
 2. **Architecture** (`02_architecture/`)
-   - Core architecture overview, cryptographic layer, container roles, IO bus, Lingua protocol, and security hardening.
+   - Core architecture overview, cryptographic layer, container roles, IO bus, LINGUA protocol, and security hardening.
 3. **Agents** (`03_agents/`)
-   - Agent types, IO container, oversight and security containers, personality templates, and logo system.
+   - Container archetypes, IO container, oversight and security containers, personality templates, and logo system.
 4. **Protocol** (`04_protocol/`)
    - PRYMA protocol specifics, container interaction, Solana integration, cryptographic identity, and dApp governance.
 5. **Runtime** (`05_runtime/`)

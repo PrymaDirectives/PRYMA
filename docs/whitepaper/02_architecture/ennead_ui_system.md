@@ -230,7 +230,7 @@ contract PrymaConstitution {
 **Deployed:** With every Fleet, upgradeable via governance
 
 **What They Do:**
-- Monitor agent behavior for patterns that violate constitution
+- Sentinel/Argus containers continuously monitor behavior for patterns that violate constitution
 - Detect:
   - **Spam:** Agents sending >1000 messages/sec (likely DDoS)
   - **Exploitation:** Agents draining wallets via deceptive UX
